@@ -58,9 +58,9 @@ static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim){
-	if(htim->Instance == TIM3){
-		turn_counter++;
-	}	
+  if(htim->Instance == TIM3){
+    turn_counter++;
+  }	
 }
 /* USER CODE END PFP */
 
@@ -89,8 +89,8 @@ int main(void)
   MX_TIM3_Init();
 
   /* USER CODE BEGIN 2 */
-	HAL_TIM_Encoder_Start_IT(&htim1,TIM_CHANNEL_1 | TIM_CHANNEL_2);
-	HAL_TIM_IC_Start_IT(&htim3,TIM_CHANNEL_1);
+  HAL_TIM_Encoder_Start_IT(&htim1,TIM_CHANNEL_1 | TIM_CHANNEL_2);
+  HAL_TIM_IC_Start_IT(&htim3,TIM_CHANNEL_1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,11 +100,11 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-		counter = __HAL_TIM_GET_COUNTER(&htim1);
-		direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim1);
-		printf(" encoder counter %d %s, turn counter = %d\n",counter,
-							direction == 0 ? "Increasing":"Decreasing",turn_counter);	
-		HAL_Delay(250); 
+    counter = __HAL_TIM_GET_COUNTER(&htim1);
+    direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim1);
+    printf(" encoder counter %d %s, turn counter = %d\n",counter,
+			direction == 0 ? "Increasing":"Decreasing",turn_counter);	
+    HAL_Delay(250); 
   }
   /* USER CODE END 3 */
 
