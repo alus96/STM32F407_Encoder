@@ -1,0 +1,25 @@
+--cpu Cortex-M4.fp
+"stm32f407_encoder\stm32f4xx_hal_tim_ex.o"
+"stm32f407_encoder\stm32f4xx_hal_flash_ramfunc.o"
+"stm32f407_encoder\stm32f4xx_hal_gpio.o"
+"stm32f407_encoder\stm32f4xx_hal_dma.o"
+"stm32f407_encoder\stm32f4xx_hal.o"
+"stm32f407_encoder\stm32f4xx_hal_dma_ex.o"
+"stm32f407_encoder\stm32f4xx_hal_flash_ex.o"
+"stm32f407_encoder\stm32f4xx_hal_flash.o"
+"stm32f407_encoder\stm32f4xx_hal_pwr_ex.o"
+"stm32f407_encoder\stm32f4xx_hal_cortex.o"
+"stm32f407_encoder\stm32f4xx_hal_tim.o"
+"stm32f407_encoder\stm32f4xx_hal_rcc_ex.o"
+"stm32f407_encoder\stm32f4xx_hal_pwr.o"
+"stm32f407_encoder\stm32f4xx_hal_rcc.o"
+"stm32f407_encoder\main.o"
+"stm32f407_encoder\stm32f4xx_it.o"
+"stm32f407_encoder\stm32f4xx_hal_msp.o"
+"stm32f407_encoder\fputc_debug.o"
+"stm32f407_encoder\startup_stm32f407xx.o"
+"stm32f407_encoder\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "STM32F407_Encoder\STM32F407_Encoder.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "STM32F407_Encoder.map" -o STM32F407_Encoder\STM32F407_Encoder.axf
