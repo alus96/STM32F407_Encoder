@@ -90,6 +90,7 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   HAL_TIM_Encoder_Start_IT(&htim1,TIM_CHANNEL_1 | TIM_CHANNEL_2);
+  HAL_TIM_Base_Start(&htim1);
   HAL_TIM_IC_Start_IT(&htim3,TIM_CHANNEL_1);
   /* USER CODE END 2 */
 
